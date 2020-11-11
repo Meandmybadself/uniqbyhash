@@ -1,0 +1,20 @@
+{
+  "name": "deduper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:mac": "pkg -t node12-macos-x64 --output ./binaries/uniqbyhash ./index.js && cd binaries && zip ./uniqbyhash.mac.zip ./uniqbyhash",
+    "build:win": "pkg -t node12-win-x64 --output ./binaries/uniqbyhash.exe ./index.js && cd binaries && zip ./uniqbyhash.win.zip ./uniqbyhash.exe",
+    "build": "rm ./binaries/* & npm run build:mac && npm run build:win",
+    "release": "npm run build && open ./binaries"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^6.2.0",
+    "md5-file": "^5.0.0",
+    "pkg": "^4.4.9"
+  }
+}
