@@ -2,7 +2,7 @@
 
 ## Overview
 
-This CLI makes it easy to remove duplicate files using each file's md5 hash.
+This Windows & Mac CLI makes it easy to remove duplicate files using each file's md5 hash.
 
 - Is this foolproof? No.
 - Is this probably stupid? Probably.
